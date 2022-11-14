@@ -1,0 +1,149 @@
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+header img {
+    height: 96px;
+}
+
+.cor-de-fundo-header {
+    background-color: #b5effb;
+    border-bottom: solid 12px #fcfac7;
+}
+.cor-link {
+color: #111111 ;
+font-weight: bold;
+}
+.cor-link:hover {
+    color: #ffffeb;
+}   
+.banner-principal {
+    width:100%;
+}
+.texto-conteudo h2 {
+    font-size: 18px;
+}
+.imagem-conteudo {
+    height: 100%;
+    width: 100%;
+}
+footer p {
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.cor-de-fundo-footer {
+    background-color: #b5effb;
+    border-top: solid 12px #fcfac7;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.arrow-icon {
+    width: 70px;
+    border-radius: 80px;
+}
+.arrow-icon:hover {
+    -webkit-filter: drop-shadow(3px 3px 3px #29292960);
+    filter: drop-shadow(3px 3px 3px  #29292960);
+}
+.btn-config {
+    height: 80%;
+    background-color: #5ab1c4;
+    color: white;
+    margin: 10px;
+}
+.btn-config:hover {
+    color: #fcfac7;
+    background-color: #87cbd9;
+}
+.btn-espaco {
+    margin: 50px 0px 130px 0px
+}
+.titulo-aba {
+    -webkit-filter: drop-shadow(3px 3px 3px #5ab1c4);
+    filter: drop-shadow(3px 3px 3px  #5ab1c4);
+}
+.titulo-conf {
+    margin-top: 15px;
+}
+.tabela-alunos {
+    box-shadow: 2px 2px 2px 1px #2d2d2d2f; 
+    margin: 40px 0px 100px 0px;
+    border: 2px solid;
+    border-color: white;  
+}
+th, td {
+    border: 2px solid;
+    border-color: white;
+  }
+thead {
+    background-color:#5ab1c4;
+    text-align: center;
+    color: white;
+}
+tbody tr:nth-child(odd) {
+    background:  #ffffeb;
+    text-align: center;
+}
+tbody tr:nth-child(even) {
+    background: #fcfac7;
+    text-align: center
+}
+.distancia-linha {
+    display: flex;
+    justify-content: space-evenly;
+}
+.mostra-usuario {
+    margin: 10px 0px 100px 0px;
+    font-size: 14px;
+}
+.notificacao {
+    border: 2px solid;
+    border-color: #111111;
+    padding: 12px 50px;
+    margin: 70px 0px
+}
+.campo-obrigatorio{
+    color: red
+}
+#jogo {
+    border: 1px solid #111;
+    border-radius: 10px ;
+    background-color: #fcfac7 ;
+    padding: 20px;
+}
+.front img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.back img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.back{
+    display: none;
+}
+.row{
+    margin-top: 15px;
+}
+#box2 {
+    width: 170px;
+    height: 110px;
+    background-color: #5ab1c4;
+    color: white;
+    border-radius: 10px;
+}
+#html, #body {
+	width: 100%;
+	height: 100%;
+	margin: 0;	
+}
+#footer {
+    position: relative;
+    top:8%;
+    bottom:0%;
+    line-height: auto;
+}

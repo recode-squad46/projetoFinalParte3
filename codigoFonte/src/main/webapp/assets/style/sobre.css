@@ -1,0 +1,12 @@
+
+.card {
+    display: inline-block;
+    Margin: 30px;
+}
+
+.titulo{
+    flex: content;
+    align-items: center;
+}
+
+.card{}
