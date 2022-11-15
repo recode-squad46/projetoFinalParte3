@@ -57,6 +57,12 @@ public class Aluno {
 		this.nome = nome;
 	}
 	
+	public Professor getProfessor() {
+		return professor;
+	}
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
 	
 	
 	//muitos alunos para um professor - quem recebe a FK

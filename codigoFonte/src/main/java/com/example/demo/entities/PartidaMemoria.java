@@ -62,6 +62,13 @@ public class PartidaMemoria {
 	public void setQuantidadeJogadas(int quantidadeJogadas) {
 		this.quantidadeJogadas = quantidadeJogadas;
 	}
+	public Aluno getAluno() {
+		return aluno;
+	}
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+	
 	
 	//muitas partidas para um aluno - quem recebe a FK
 	@ManyToOne

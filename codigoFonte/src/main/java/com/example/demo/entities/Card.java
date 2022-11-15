@@ -61,6 +61,16 @@ public class Card {
 	public void setImgCard(String imgCard) {
 		this.imgCard = imgCard;
 	}
+	
+	public Professor getProfessor() {
+		return professor;
+	}
+	public void setProfessor(Professor professor) {
+		this.professor = professor;
+	}
+	
+	
+	
 		
 	//muitos cards para um professor - quem recebe a FK
 	@ManyToOne
