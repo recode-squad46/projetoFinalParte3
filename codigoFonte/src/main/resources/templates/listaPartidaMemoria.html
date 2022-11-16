@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="ISO-8859-1">
-<title>LeTurminha- Cadastro de Alunos</title>
+<title>LeTurminha - Lista de Partidas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/style/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -11,7 +11,7 @@
 <body>
     <header  class="container-fluid d-flex flex-row align-items-center cor-de-fundo-header justify-content-center">
         <div class="container row justify-content-between">
-<div>
+            <div>
                 <a href="./index"> <img src="./assets/img/logo-leturminha.png" /> </a>
             </div>
             <div class="d-flex align-items-center">
@@ -45,14 +45,14 @@
     </header>
     <main>
     	<section>
- 		<div class="container d-flex align-items-center justify-content-center py-3">
+    		<div class="container d-flex align-items-center justify-content-center py-3">
     		    <nav>
                     <ul class="nav px-5">
                         <li class="nav-item">
-                            <a class="nav-link active cor-link2" href="/cadastroAluno">Novo Cadastro</a>
+                            <a class="nav-link active cor-link2" href="/cadastroPartidaMemoria">Novo Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active cor-link2" href="/listaAluno">Lista de Alunos</a>
+                            <a class="nav-link active cor-link2" href="/listaPartidaMemoria">Lista de Partidas</a>
                         </li>
                     </ul>
                 </nav>
@@ -61,23 +61,59 @@
     	<section>
      	   <div class="container">
 				<div class="row d-flex align-items-center justify-content-center">
-					<div class="col-md-7">
+					<div class="cold-md-7">
 						<hr>
-						<h3 class="titulo-aba d-flex justify-content-center">Cadastro de Novo Aluno</h3>
+						<h3 class="titulo-aba d-flex justify-content-center">Partidas Cadastradas</h3>
 						<hr>
-						
-						<form th:action="@{/cadastrarAluno}" method="post" th:object="${aluno}">
-							<div class="py-2">
-									<label>Nome completo</label>
-									<input name="nome" maxlength="300" type="text" class="form-control" id="floatingInput1" th:field="*{nome}"> 
-							</div>
-							<div class="d-flex flex-row align-items-center justify-content-center py-2">
-								<button class="btn btn-config" type="submit"> <i class="bi bi-check-lg"></i> Confirmar Cadastro</button>
-								<button class="btn btn-config-delete" type="reset"> <i class="bi bi-x-lg"></i> Limpar Formulário</button>
-							</div>
-						</form>
-						<br>
 					</div>
+				<table class="table tabela-padrao">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tempo da Partida</th>
+                            <th scope="col">Quantidade de Jogadas</th>
+                            <th scope="col">Aluno</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tr th:each="partidaMemoria : ${listaDePartidasMemoria}">
+                        <td data-label="Id" th:text="${partidaMemoria.id}"></td>
+                        <td data-label="TempoPartida" th:text="${partidaMemoria.tempoPartida}"></td>
+                        <td data-label="QuantidadeJogadas" th:text="${partidaMemoria.quantidadeJogadas}"></td>
+                        <td data-label="Aluno" th:text="${partidaMemoria.aluno.nome}"></td>
+						<td class="largura-botoes-tabela">
+							<a th:href="@{/atualizarPartidaMemoria/{id} (id=${partidaMemoria.id})}"> <button type="submit" class="btn btn-config"> <i class="bi bi-pencil-square"></i> Alterar</button></a>
+							<a th:href="@{/deletaPartidaMemoria/{id} (id=${partidaMemoria.id})}"> <button type="submit" class="btn btn-config-delete"> <i class="bi bi-trash3-fill"></i> Deletar</button></a>
+						</td>
+                    </tr>
+                </table>
+					<!-- <table class="table tabela-padrao">
+						<thead>
+							<tr>
+								<th>#</th>
+								Fui informado que n�o ser� cobrada relacionamento entre tabelas nessa entrega <th>Id Aluno</th>
+								<th>Tempo de partida</th>
+								<th>Quantidade de Jogadas</th>
+								Ser� elaborado um campo calculado na pr�xima entrega <th>Pontua��o</th> 
+								<th>A��es</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${partidasMemoria}" var="partidaMemoria">
+								<tr>
+									<td>${partidaMemoria.id}</td>
+									<td>${partidaMemoria.idAluno}</td>
+									<td>${partidaMemoria.tempoPartida} segundos</td>
+									<td>${partidaMemoria.qtdJogadas}</td>
+									<td></td>
+									<td class="largura-botoes-tabela">
+										<a href="PartidaMemoriaUpdate?partidaMemoriaId=${partidaMemoria.id}"> <button type="submit" class="btn btn-config"> <i class="bi bi-pencil-square"></i> Alterar</button></a>
+										<a href="PartidaMemoriaRemove?partidaMemoriaId=${partidaMemoria.id}"> <button type="submit" class="btn btn-config-delete"> <i class="bi bi-trash3-fill"></i> Deletar</button></a>
+									</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table> -->
 				</div>
 			</div>
     	</section>
@@ -87,6 +123,7 @@
             Copyright © 2022 Recode. Todos os direitos reservados.
         </p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
