@@ -65,7 +65,7 @@
 						<hr>
 						<h3 class="titulo-aba d-flex justify-content-center">Cadastro de Nova Partida</h3>
 						<hr>
-						<th:action="@{/cadastrarPartidaMemoria}" method="post" th:object="${partidaMemoria}">
+						<form th:action="@{/cadastrarPartidaMemoria}" method="post" th:object="${partidaMemoria}">
 							<input value="" type="number" name="id" style="visibility:hidden">
 							<div class="py-2">
 									<label>Tempo de partida (em segundos)</label>

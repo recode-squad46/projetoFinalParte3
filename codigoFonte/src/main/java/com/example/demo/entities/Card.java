@@ -20,7 +20,7 @@ public class Card {
 	@Column(name = "nome")
 	private String nome;
 	
-	@Column(length = 1200, name = "imgCard")
+	@Column(length = 1200, name = "img_card")
 	private String imgCard;
 
 	

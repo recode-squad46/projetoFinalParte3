@@ -65,11 +65,10 @@
 						<hr>
 						<h3 class="titulo-aba d-flex justify-content-center">Cadastro de Novo Professor</h3>
 						<hr>
-						
-						<th:action="@{/cadastrarProfessor}" method="post" th:object="${professor}">
+						<form th:action="@{/cadastrarProfessor}" method="post" th:object="${professor}">
 							<div class="py-2">
 									<label>Nome completo</label>
-									<input name="nome" maxlength="300" type="text" class="form-control" id="floatingInput1" th:field="*{nome}"> 
+									<input name="nome" maxlength="250" type="text" class="form-control" id="floatingInput1" th:field="*{nome}"> 
 							</div>
 							<div class="py-2">
 									<label>E-mail</label>
