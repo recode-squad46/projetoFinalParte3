@@ -56,4 +56,4 @@ Versão Spring Tool Suite: 4.4.16.0.RELEASE
 
 ### Diagrama de Classe em UML
 
-<img src="https://github.com/recode-squad46/projetoFinalParte2/blob/main/modeloDiagramaDeClassesUML/uml.jpg" style="width: 900px"/>
+<img src="https://github.com/recode-squad46/projetoFinalParte3/blob/main/modeloDiagramaDeClassesUML/uml.jpg" style="width: 900px"/>
