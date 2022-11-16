@@ -1,4 +1,4 @@
-# projetoFinalParte2
+# projetoFinalParte3
 <img src="https://github.com/recode-squad46/projeto-recodepro2022/blob/main/site/assets/img/logo-leturminha.png" style="width: 500px"/>
 
 ---
@@ -20,13 +20,25 @@
 
 ---
 
+### Versões utilizadas:
+
 Versão usada do Java: 11.0.15 LTS
 
-Versão do DB: MySQL Workbench 8.0
+Versão do DB: MySQL 8.0.31
 
-Apache Tomcat v9.0.65 Server
+Versão Spring Tool Suite: 4.4.16.0.RELEASE
 
-Versão driver JDBC Maven: mysql-connector-java-8.0.30.jar
+---
+
+### Como executar o projeto?
+
+1) Clone esse **repositório** do seu projeto na sua máquina;
+2) Instale as versões acima que foram utilizadas;
+3) Abra o projeto com **Spring Tool Suite**;
+4) Dentro da IDE, clique com o botão direito no **nome do projeto**. Logo após em "**Run as**" e "**Spring Boot App**";
+5) Abra o link: http://localhost:8080/
+6) **Basta navegar!**
+
 
 ---
 
